@@ -1,0 +1,38 @@
+<html>
+
+  <head> 
+    <title> TODO LIST</title>
+</head>
+    
+<body>
+
+<input type="text" id="taskInput" placeholder="Enter task" />
+<button id="addBtn"> Add Task</button>
+<ul id="todoList"> </ul>
+
+<script>
+const list = documnets.querySelector("todoList");
+const input = documnent.querySelector("#taskInput");
+const addBtn = document.querySelector("addBtn");
+
+
+addBtn.addEventListener("click", function () {
+const li = document.createElement("li");
+li.textContent = input.value;
+list.append(li);
+input.value = " ";
+const delteBtn = document.createElement("button");
+delteBtn.textContent = "Delete";
+li.append(delteBtn);
+delteBtn.addEventListener("click", function (){
+  li.remove();
+})
+
+} );
+
+</script>
+
+</body>
+
+
+</html>
